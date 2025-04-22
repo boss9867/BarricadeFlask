@@ -1,6 +1,4 @@
 import os
-import eventlet
-eventlet.monkey_patch()
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_socketio import SocketIO
@@ -8,7 +6,6 @@ from ultralytics import YOLO
 from PIL import Image
 from geopy.geocoders import Nominatim
 import io
-
 
 app = Flask(__name__)
 CORS(app)
@@ -125,4 +122,3 @@ def handle_disconnect():
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     socketio.run(app, host='0.0.0.0', port=port)
-
