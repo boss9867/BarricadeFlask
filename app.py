@@ -14,7 +14,7 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 barricades = []
 
 # ✅ Load YOLOv11 model
-model = YOLO('C:/Users/faiz9/Desktop/BarricadeFlask/best.pt')  # Update if needed
+model = YOLO('models/best.pt')  # Update if needed
 
 # ✅ Setup reverse geocoding
 geolocator = Nominatim(user_agent="barricade-detector")
